@@ -17,5 +17,6 @@ class Note(NoteBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True  # allows using ORM/db rows as responses
+       from_attributes = True
+# allows using ORM/db rows as responses
 
