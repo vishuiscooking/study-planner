@@ -6,6 +6,23 @@
   <title>To-Do List</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    #taskList::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    #taskList::-webkit-scrollbar-thumb {
+      background-color: #c084fc;
+      border-radius: 4px;
+    }
+
+    #taskList {
+      max-height: 300px;
+      overflow-y: auto;
+      margin-top: 1rem;
+      padding: 0;
+      list-style-type: none;
+    }
+
     body {
       margin: 0;
       padding: 0;
