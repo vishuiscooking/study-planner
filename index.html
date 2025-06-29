@@ -1,22 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>To-Do List</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #6b21a8;
+      margin-bottom: 1.5rem;
+    }
+
+    #taskInput {
+      width: calc(100% - 60px);
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #9333ea;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #7e22ce;
+    }
+
+    #taskList {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    #taskList li {
+      background: #f9f5ff;
+      border-left: 5px solid #9333ea;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #taskList button {
+      background-color: transparent;
+      color: #ef4444;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Todo List</h1>
-        <input type="text" id="taskInput" placeholder="Add a new task...">
-        <button onclick="addTask()">Add</button>
-        <ul id="taskList"></ul>
-        <div class="footer">
-            <span>Date: <span id="date"></span></span>
-        </div>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div style="display: flex; margin-bottom: 1rem;">
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button onclick="addTask()">Add</button>
     </div>
-    <script src="script.js"></script>
+    <ul id="taskList"></ul>
+    <div class="footer">
+      Date: <span id="date"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
